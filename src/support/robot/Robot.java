@@ -5,6 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.GeneralPath;
 import javax.swing.*;
+
+import assignment0.RobotInstructions;
+import support.assignment0.RobotMotionAdapter;
 import support.cse131.Image2;
 
 /**
@@ -148,7 +151,6 @@ public class Robot extends Image2 implements ActionListener {
 		this.imageFile = imageFile;
 	}
 
-
 	/**
 	 * The paint method not only paints the image, but also paints the "trail" that
 	 * the support.robot leaves behind it.
@@ -156,15 +158,15 @@ public class Robot extends Image2 implements ActionListener {
 	@Override
 	public void paint(Graphics g) {
 		loadImage(imageFile);
-		
 		super.paint(g);
 		if (getParent() != null) {	
 			// BSIEVER: Changed stroke / color
 			Graphics2D g2d = (Graphics2D)getParent().getGraphics();
 			BasicStroke bs = new BasicStroke(3.0f);
 			g2d.setStroke(bs);
-			g2d.setColor(Color.BLACK);
+			g2d.setColor(Color.RED);
 			g2d.draw(path);
+			
 		}
 	}
 

@@ -24,11 +24,12 @@ import javax.swing.event.ChangeListener;
 import support.assignment0.ImagePanel;
 import support.assignment0.RobotMotionAdapter;
 import support.assignment0.RobotThread;
+import assignment0.RobotInstructions;
 import support.robot.RobotModel;
 import support.robot.RobotView;
 
 public class RobotController extends JFrame {
-
+	
 	private JPanel contentPane;
 	private String points = "";
 	private JTextArea savedPoints;
@@ -138,7 +139,10 @@ public class RobotController extends JFrame {
 		RobotView view = new RobotView(model.pcs);
 		model.setSpeed(speed);
 		panel.add(view.getRobot());
-		model.setLocation(500, 550);
+		// model.setLocation sets the starting point of the robot. (500, 550) was the
+		// default but I have set it to the top left corner (100, 70) here. Note that the
+		// frame starts at (0, 0) in the top left corner where (x, y) y increases down.
+		model.setLocation(70, 550);
 		RobotMotionAdapter motion = new RobotMotionAdapter(model);
 		RobotThread t = new RobotThread(motion, instructions);
 		t.start();

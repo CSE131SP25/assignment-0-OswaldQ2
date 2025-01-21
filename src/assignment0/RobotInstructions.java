@@ -1,9 +1,11 @@
 package assignment0;
 
+import java.awt.Color;
+
 import support.assignment0.RobotMotionAdapter;
 
 public class RobotInstructions  {
-
+	
 	/*
 	 * Below you see a method called "act".
 	 * It has one parameter, called "support.robot".
@@ -12,8 +14,9 @@ public class RobotInstructions  {
 	 * 
 	 * For now, please accept that the instructions below cause the support.robot to
 	 * move forward, turn left, or turn right.
-	 */
-	public void act(RobotMotionAdapter robot) {
+	 */	
+	
+	public void act(RobotMotionAdapter robot, Color color) {
 		
 		/**
 		 * Each of the following lines of code executes in turn.  The
@@ -29,11 +32,103 @@ public class RobotInstructions  {
 		 * You will add instructions at the end of the code to cause the support.robot to move
 		 * as you desire.
 		 */
-		robot.forward(60);
-		robot.turnLeft(90);
-		robot.forward(23);
+		robot.forward(500);
 		robot.turnRight(90);
-		robot.forward(80);
+		robot.forward(100);
+		robot.turnRight(180);
+		robot.forward(100);
+		robot.turnLeft(90);
+		robot.forward(500);
+		robot.turnLeft(90);
+		robot.forward(100);
+		//C is done
+		robot.turnLeft(180);
+		robot.forward(100);
+		robot.turnLeft(90);
+		robot.forward(40);
+		robot.turnLeft(90);
+		robot.forward(200);
+		robot.turnLeft(90);
+		robot.forward(40);
+		//Starting work on the "S"
+		robot.turnRight(90);
+		robot.forward(100);
+		robot.turnLeft(90);
+		robot.forward(250);
+		robot.turnLeft(90);
+		robot.forward(100);
+		robot.turnRight(90);
+		robot.forward(250);
+		robot.turnRight(90);
+		robot.forward(100);
+		//S is done
+		robot.turnLeft(180);
+		robot.forward(100);
+		robot.turnRight(90);
+		robot.forward(40);
+		robot.turnRight(90);
+		robot.forward(200);
+		robot.turnRight(90);
+		robot.forward(40);
+		//Starting work on the E
+		robot.turnLeft(90);
+		robot.forward(100);
+		robot.back(100);
+		robot.turnLeft(90);
+		robot.forward(250);
+		robot.turnLeft(90);
+		robot.forward(100);
+		robot.back(100);
+		robot.turnLeft(90);
+		robot.forward(250);
+		robot.turnLeft(90);
+		robot.forward(100);
+		robot.back(100);
+		//E is done
+		robot.turnLeft(90);
+		robot.forward(40);
+		robot.turnLeft(90);
+		robot.forward(200);
+		robot.turnLeft(90);
+		robot.forward(40);
+		//Starting work on the first 1
+		robot.forward(500);
+		robot.turnLeft(135);
+		robot.forward(100);
+		robot.back(100);
+		robot.turnLeft(45);
+		//1 is done
+		robot.forward(40);
+		robot.turnRight(90);
+		robot.forward(100);
+		robot.turnRight(90);
+		robot.forward(40);
+		//Starting work on the 3
+		robot.turnLeft(90);
+		robot.forward(100);
+		robot.turnRight(90);
+		robot.forward(250);
+		robot.turnRight(90);
+		robot.forward(100);
+		robot.back(100);
+		robot.turnRight(90);
+		robot.forward(250);
+		robot.turnRight(90);
+		robot.forward(100);
+		robot.back(100);
+		//3 is done
+		robot.turnRight(90);
+		robot.forward(40);
+		robot.turnLeft(90);
+		robot.forward(100);
+		robot.turnLeft(90);
+		robot.forward(40);
+		//Starting work on the second 1
+		robot.forward(500);
+		robot.turnLeft(135);
+		robot.forward(100);
+		robot.back(100);
+		robot.turnLeft(45);
 	}
 
 }
